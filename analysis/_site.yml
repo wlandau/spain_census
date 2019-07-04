@@ -1,7 +1,7 @@
-name: "spain_census"
+name: spain_census
 output_dir: ../docs
 navbar:
-  title: "spain_census"
+  title: spain_census
   left:
   - text: Home
     href: index.html
@@ -9,6 +9,10 @@ navbar:
     href: about.html
   - text: License
     href: license.html
+  right:
+  - icon: fa-github
+    text: Source code
+    href: https://github.com/cimentadaj/spain_census
 output:
   workflowr::wflow_html:
     toc: yes
