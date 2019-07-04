@@ -9,13 +9,11 @@ write_census <- function(file_path, save_path) {
     unzip("./data/raw_data.zip", exdir = "./data/")
   }
 
-  message("The microdatos file is being read. This can take some time but",
-          "this is only run if the preprocessed file is not saved. Once this",
-          "is run once it will not run again.")
-  
   censo <-
-    censo2010(
-      file_path
+    suppressWarnings(
+      censo2010(
+        file_path
+      )
     )
 
   # Because this data is so big, we save it to avoid rerunning censo2010
