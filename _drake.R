@@ -4,6 +4,7 @@ source("code/plan.R")
 
 drake_config(
   plan,
-  memory_strategy = "memory", # will become "autoclean" next release
+  memory_strategy = "memory", # select "autoclean" or "preclean" next release
+  garbage_collection = TRUE,
   console_log_file = "drake.log"
 )
