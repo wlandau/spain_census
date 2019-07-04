@@ -7,11 +7,14 @@ processed_path <- here("output", "microdatos_censo.rds")
 # from census2010 function takes up a lot of time. By saving it
 # we save all the time of preprocessing columns.
 if (!file.exists(processed_path)) write_census(data_path, processed_path)
+message("Data was downloaded successfully")
 
 message("Reading the data (heavy, takes up to a few minutes)")
 read_data <- read_rds(processed_path)
+message("Data read successfully in memory")
 
+message("Drake started the plan. This is where the memory allocation error happens")
 plan <-
   drake_plan(
-    process_data = select_few(read_data)
+    process_data = select(read_data, c("CPRO", "CMUN", "IDHUECO"))
   )
