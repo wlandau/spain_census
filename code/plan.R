@@ -13,6 +13,5 @@ read_data <- read_rds(processed_path)
 
 plan <-
   drake_plan(
-    read_codebook = read_codebook_labels(file_in(labels_path)),
     process_data = select_few(read_data)
   )

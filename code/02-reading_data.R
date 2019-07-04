@@ -23,20 +23,3 @@ write_census <- function(file_path, save_path) {
   # a lot of time).
   write_rds(censo, save_path)
 }
-
-read_codebook_labels <- function(file_path) {
-  ## variables_link <- "ftp://www.ine.es/temas/censopv/cen11/Personas%20detallado_WEB.xls"
-  ## download.file(variables_link, destfile = "./data/variable_labels.xls")
-  variable_coding <-
-    read_xls(
-      file_path,
-      col_names = FALSE,
-      skip = 5
-    )
-
-  # Fix up variable names
-  variable_coding <-
-    set_names(variable_coding, paste0("X", 1:ncol(variable_coding)))
-
-  variable_coding
-}

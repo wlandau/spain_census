@@ -1,14 +1,7 @@
-# Load your packages and supporting functions into your session.
-# If you use supporting scripts like the ones below,
-# you will need to supply them yourself. Examples:
-# https://github.com/wlandau/drake-examples/tree/master/main/R
-source("code/01-packages.R")  # Load your packages, e.g. library(drake).
-source("code/02-reading_data.R") # Define your custom code as a bunch of functions.
-source("code/plan.R")      # Create your drake plan.
+source("code/01-packages.R")
+source("code/02-reading_data.R")
+source("code/plan.R")
 
-# _drake.R must end with a call to drake_config().
-# The arguments to drake_config() are basically the same as those to make().
-# options(clustermq.scheduler = "multicore") # For parallel computing.
 drake_config(
   plan
 )
