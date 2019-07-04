@@ -11,3 +11,6 @@ analysis/*_cache
 analysis/site_libs
 data/
 output/
+.drake
+.drake_history
+drake.log
