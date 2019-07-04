@@ -1,0 +1,15 @@
+---
+title: "first-analysis"
+author: "Jorge Cimentada"
+date: "2019-07-04"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+## Introduction
+
+```{r, drake_plan}
+make(plan)
+```
+

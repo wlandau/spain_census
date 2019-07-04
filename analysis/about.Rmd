@@ -7,4 +7,4 @@ editor_options:
   chunk_output_type: console
 ---
 
-Describe your project.
+This is an attempt to look at the distribution of educational disadvantages by municipalities in Spain.
